@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="SchiffeVersenken.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SchiffeVersenken.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />         
+        </Grid.ColumnDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Sea War" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Settings" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" Grid.Column="0" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <StackPanel>
+                <TextBlock
+                    Text="Schwierigkeitsgrad"
+                    FontSize="20"/>
+            <RadioButton 
+                Content="Leicht"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center" 
+                GroupName="Group1"/>
+            <RadioButton Content="Mittel"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                             GroupName="Group1" />
+            <RadioButton Content="Schwer"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                             GroupName="Group1" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <StackPanel >
+            <ToggleSwitch IsOn="True"
+                          VerticalAlignment="Top"
+                          OnContent="Soundeffect On"
+                          OffContent="Soundeffect off"
+                          Margin="0,0,20,0">
+            </ToggleSwitch>
+                <ToggleSwitch IsOn="True"
+                              VerticalAlignment="Top"
+                              OnContent="Music On"
+                              OffContent="Music off"
+                              Margin="0,0,20,0">
+                </ToggleSwitch>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
