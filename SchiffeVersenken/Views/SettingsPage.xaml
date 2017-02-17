@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+      DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=SettingsViewModel}"
+      Background="#0078d7">
 
     <Grid x:Name="LayoutRoot">
 
@@ -37,37 +38,34 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" Grid.Column="0" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <StackPanel>
-                <TextBlock
-                    Text="Schwierigkeitsgrad"
-                    FontSize="20"/>
+                <TextBlock Text="Difficulty"
+                    FontSize="25"/>
             <RadioButton 
-                Content="Leicht"
-                         HorizontalAlignment="Left"
-                         VerticalAlignment="Center" 
-                GroupName="Group1"/>
-            <RadioButton Content="Mittel"
+                Content="Easy"
                          HorizontalAlignment="Left"
                          VerticalAlignment="Center"
-                             GroupName="Group1" />
-            <RadioButton Content="Schwer"
+                GroupName="Group1"
+                             IsChecked="{Binding DifficultyEasy, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <RadioButton Content="Moderate"
                          HorizontalAlignment="Left"
                          VerticalAlignment="Center"
-                             GroupName="Group1" />
+                             GroupName="Group1"
+                             IsChecked="{Binding DifficultyModerate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <RadioButton Content="Hard"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                             GroupName="Group1"
+                             IsChecked="{Binding DifficultyHard, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <StackPanel >
-            <ToggleSwitch IsOn="True"
-                          VerticalAlignment="Top"
-                          OnContent="Soundeffect On"
-                          OffContent="Soundeffect off"
-                          Margin="0,0,20,0">
-            </ToggleSwitch>
-                <ToggleSwitch IsOn="True"
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <ToggleSwitch IsOn="{Binding Soundeffect, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                               VerticalAlignment="Top"
-                              OnContent="Music On"
-                              OffContent="Music off"
-                              Margin="0,0,20,0">
+                              HorizontalAlignment="Right"
+                              OnContent="Soundeffect On"
+                              OffContent="Soundeffect Off">
                 </ToggleSwitch>
             </StackPanel>
         </Grid>
