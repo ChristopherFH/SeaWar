@@ -1,4 +1,4 @@
-# SeaWar for WIndows Phone 8
+# SeaWar for Windows Phone 8
 
 
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
