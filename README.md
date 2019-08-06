@@ -1,16 +1,25 @@
 # SeaWar for Windows Phone 8
 
+This game is an adaption of the classic game Battleships. 
 
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                   Version 2, December 2004
+## How to play 
 
-Copyright (C) 2017 Christopher Koellner
+- Select ship you want to place and tap on a position on the grid. 
+    - Ships can be rotated using the arrow button. 
+    - It is also possible to use the auto-placement function. 
+- After clicking the start button, select coordinates on the grid of your opponent.
+- Try to sink your opponent's fleet!
 
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
+It is possible to play the game in three difficulties. Furthermore, the respective highscore is saved. 
 
-           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+## User Interface
 
- 0. You just DO WHAT THE FUCK YOU WANT TO.
+### Placement
+![Placement](images/Placingpage_lumia920blue_landscape.png)
+![Auto Placement](images/Autoplace_lumia920blue_landscape.png)
+
+### Game
+![Game](images/Gamepage_lumia920blue_portrait.png)
+
+### Settings
+![Settings](images/Settingspage_lumia920blue_landscape.png)
