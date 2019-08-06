@@ -15,8 +15,10 @@ It is possible to play the game in three difficulties. Furthermore, the respecti
 ## User Interface
 
 ### Placement
-![Placement](images/Placingpage_lumia920blue_landscape.png)
-![Auto Placement](images/Autoplace_lumia920blue_landscape.png)
+<p align="center">
+  <img height="300" src="images/Placingpage_lumia920blue_landscape.png">
+  <img height="300" src="images/Autoplace_lumia920blue_landscape.png">
+</p>
 
 ### Game
 ![Game](images/Gamepage_lumia920blue_portrait.png)
